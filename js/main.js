@@ -1,16 +1,34 @@
 const $ = selector => document.querySelector(selector);
+const $$ = selector => document.querySelectorAll(selector)
 const languages = []
 
 const showJobs = (data) => {
-   for (const { name, image, description, location, seniority, benefits, salary, long_term, languages, id } of data) {
+   for (const {id, name, image, description, location, seniority, benefits, salary, long_term, languages} of data) {
       $('.allJobs').innerHTML += `
       <div class='cardJob'>
          <h2>${name}</h2>
          <p>${description}</p>
          <a>${languages.join(', ')}</a>
-      </div>`
+      </div> 
+      <div class='deleteJob' id-delete="${id}" >Delete</div>`
+   }
+
+  
+   capturingDeleteBtn()
+}
+
+const capturingDeleteBtn = () =>{
+   for(const btn of $$('.deleteJob')){
+      btn.addEventListener('click', (e) =>{
+         e.preventDefault()
+         const getDelete = btn.getAttribute('id-delete')
+         console.log(getDelete)
+         deleteJob(getDelete)
+      })
    }
 }
+
+
 
 const addJobForm = () => {
    return {
@@ -37,6 +55,7 @@ const addLanguajes = () => {
    return languages
 }
 
+
 const initialized = () => {
    showJobsApi()
    $('#addLanguage').addEventListener('click', (e) => {
@@ -48,6 +67,9 @@ const initialized = () => {
       console.log('clic')
       addJobApi(urlJobs)
    });
+   
+   
+   
 }
 
 window.addEventListener('DOMContentLoaded', initialized)

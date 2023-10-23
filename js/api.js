@@ -15,3 +15,9 @@ fetch(url,{
    body: JSON.stringify(addJobForm())
 })
 }
+
+const deleteJob = (id) =>{
+   fetch(`${urlJobs}/${id}`,{
+      method: 'DELETE', 
+   })
+}
