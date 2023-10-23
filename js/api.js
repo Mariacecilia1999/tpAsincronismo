@@ -5,3 +5,13 @@ const showJobsApi = () =>{
    .then(response => response.json())
    .then(data => showJobs(data))
 }
+
+const addJobApi = (url) =>{
+fetch(url,{
+   method: 'POST', 
+   headers:{
+      'Content-Type' : 'Application/json'
+   },
+   body: JSON.stringify(addJobForm())
+})
+}
