@@ -1,14 +1,32 @@
 const $ = selector => document.querySelector(selector)
-const showJobs = (data) =>{
-   for(const {name, image, description, location,seniority,benefits,salary, long_term, languages, id} of data){
-      $('.allJobs').innerHTML += `
-      <div class='cardJob'>
-         <h2>${name}</h2>
-         <p>${description}</p>
-         <a>${languages}</a>
-      </div>`
+$('#jobTitle').value
 
-      console.log(benefits)
+const addJobForm = () =>{
+   return {
+      name: $('#jobTitle').value,
+      description:$('#description').value,
+      location: $('#location').value,
+      seniority: $('#seniority').value,
+      category: $('#category').value,
+      benefits: {
+         vacations: $('#vacations').value,
+         health_ensurance: $('#healthEnsurance').value,
+         internet_paid: $('#internetPaid').value
+      },
+      salary: $('#salary').value,
+      long_term:$('#longTerm').value,
+      languages: [
+         $('#languages').value
+      ]
    }
 }
 
+
+const initialized = () =>{
+   $('#addJobBtn').addEventListener('submit', (e) =>{
+      e.preventDefault()
+      addJobApi(urlJobs)
+   })
+}
+
+document.addEventListener('DOMContentLoaded', initialized)
