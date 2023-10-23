@@ -12,3 +12,9 @@ const showJobs = (data) =>{
    }
 }
 
+
+const initialized = () =>{
+   showJobsApi()
+}
+
+document.addEventListener('DOMContentLoaded', initialized)
