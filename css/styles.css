@@ -1,0 +1,19 @@
+main{
+   display: flex;
+   justify-content: center;
+}
+.allJobs{
+   width: 70%;
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+}
+
+.cardJob{
+   width: 200px;
+   height: 200px;
+   border: black 2px solid;
+   border-radius: 5%;
+   margin: 20px;
+   text-align: center;
+}
