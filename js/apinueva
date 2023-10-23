@@ -1,0 +1,416 @@
+[
+ {
+  "name": "Ana Smith",
+  "image": "https://ejemplo.com/ana-smith.jpg",
+  "description": "Diseñador gráfico creativo con experiencia en publicidad y branding.",
+  "location": "Nueva York, NY",
+  "category": "Diseño Gráfico",
+  "seniority": "Senior",
+  "benefits": {
+    "vacation": "3 weeks",
+    "health_ensurance": "OSDE 210",
+    "internet_paid": true
+},
+  "salary": 55000,
+  "long_term": true,
+  "languages": [
+   "Adobe Illustrator",
+   "Photoshop"
+  ],
+  "id": "1"
+ },
+ {
+  "name": "Elena Garcia",
+  "image": "https://ejemplo.com/elena-garcia.jpg",
+  "description": "Diseñador de moda con una pasión por la alta costura y la creatividad.",
+  "location": "París, Francia",
+  "category": "Diseño de Moda",
+  "seniority": "Senior",
+  "benefits": {
+    "vacation": "4 weeks",
+    "health_ensurance": "OSDE 210",
+    "internet_paid": true
+},
+  "salary": 75000,
+  "long_term": true,
+  "languages": [
+   "AutoCAD",
+   "Illustrator"
+  ],
+  "id": "2"
+ },
+ {
+  "name": "Carlos Martinez",
+  "image": "https://ejemplo.com/carlos-martinez.jpg",
+  "description": "Diseñador de interiores con experiencia en proyectos residenciales y comerciales.",
+  "location": "Madrid, España",
+  "category": "Diseño de Interiores",
+  "seniority": "Intermedio",
+  "benefits": {
+    "vacation": "6 weeks",
+    "health_ensurance": "OSDE 210",
+    "internet_paid": true
+},
+  "salary": 45000,
+  "long_term": true,
+  "languages": [
+   "SketchUp",
+   "3ds Max"
+  ],
+  "id": "3"
+ },
+ {
+  "name": "Luisa Rodriguez",
+  "image": "https://ejemplo.com/luisa-rodriguez.jpg",
+  "description": "Diseñador de joyas apasionado por la creación de piezas únicas.",
+  "location": "Miami, FL",
+  "category": "Diseño de Joyas",
+  "seniority": "Senior",
+  "benefits": {
+    "vacation": "3 weeks",
+    "health_ensurance": "OSDE 210",
+    "internet_paid": true
+},
+  "salary": 60000,
+  "long_term": true,
+  "languages": [
+   "Rhino",
+   "ZBrush"
+  ],
+  "id": "4"
+ },
+ {
+  "name": "Pedro Santos",
+  "image": "https://ejemplo.com/pedro-santos.jpg",
+  "description": "Diseñador de logotipos con un enfoque en la identidad de la marca.",
+  "location": "Lisboa, Portugal",
+  "category": "Diseño de Logotipos",
+  "seniority": "Intermedio",
+  "benefits":{
+    "vacation": "3 weeks",
+    "health_ensurance": "OSDE 210",
+    "internet_paid": true
+},
+  "salary": 42000,
+  "long_term": true,
+  "languages": [
+   "Adobe Illustrator",
+   "CorelDRAW"
+  ],
+  "id": "5"
+ },
+ {
+  "name": "Isabel Martin",
+  "image": "https://ejemplo.com/isabel-martin.jpg",
+  "description": "Diseñador de muebles con una pasión por la funcionalidad y la estética.",
+  "location": "Barcelona, España",
+  "category": "Diseño de Muebles",
+  "seniority": "Senior",
+  "benefits": {
+    "vacation": "3 weeks",
+    "health_ensurance": "OSDE 210",
+    "internet_paid": true
+},
+  "salary": 58000,
+  "long_term": true,
+  "languages": [
+   "AutoCAD",
+   "SketchUp"
+  ],
+  "id": "6"
+ },
+ {
+  "name": "Lucas Ramirez",
+  "image": "https://ejemplo.com/lucas-ramirez.jpg",
+  "description": "Diseñador de packaging con experiencia en diseño sostenible.",
+  "location": "Buenos Aires, Argentina",
+  "category": "Diseño de Packaging",
+  "seniority": "Intermedio",
+  "benefits": {
+    "vacation": "3 weeks",
+    "health_ensurance": "OSDE 210",
+    "internet_paid": true
+},
+  "salary": 48000,
+  "long_term": true,
+  "languages": [
+   "Adobe Photoshop",
+   "Illustrator"
+  ],
+  "id": "7"
+ },
+ {
+  "name": "Marta Lopez",
+  "image": "https://ejemplo.com/marta-lopez.jpg",
+  "description": "Diseñador de interiores especializado en diseño de espacios comerciales.",
+  "location": "Madrid, España",
+  "category": "Diseño de Interiores",
+  "seniority": "Senior",
+  "benefits": {
+    "vacation": "3 weeks",
+    "health_ensurance": "OSDE 210",
+    "internet_paid": true
+},
+  "salary": 60000,
+  "long_term": true,
+  "languages": [
+   "AutoCAD",
+   "SketchUp"
+  ],
+  "id": "8"
+ }, {
+   "name": "Laura Johnson",
+   "image": "https://ejemplo.com/laura-johnson.jpg",
+   "description": "Ingeniero de software especializado en desarrollo móvil.",
+   "location": "Austin, TX",
+   "category": "Desarrollo Móvil",
+   "seniority": "Senior",
+   "benefits": {
+    "vacation": "3 weeks",
+    "health_ensurance": "OSDE 210",
+    "internet_paid": true
+},
+   "salary": 85000,
+   "long_term": true,
+   "languages": ["Java", "Kotlin"],
+   "id": "9"
+ },
+ {
+   "name": "Daniel Brown",
+   "image": "https://ejemplo.com/daniel-brown.jpg",
+   "description": "Ingeniero de sistemas con experiencia en administración de redes.",
+   "location": "Chicago, IL",
+   "category": "Ingeniería de Sistemas",
+   "seniority": "Senior",
+   "benefits": {
+    "vacation": "3 weeks",
+    "health_ensurance": "OSDE 210",
+    "internet_paid": true
+},
+   "salary": 75000,
+   "long_term": true,
+   "languages": ["Cisco", "Linux"],
+   "id": "10"
+ },
+ {
+   "name": "Sofia Martinez",
+   "image": "https://ejemplo.com/sofia-martinez.jpg",
+   "description": "Analista de datos con habilidades en minería de datos y visualización.",
+   "location": "Los Angeles, CA",
+   "category": "Análisis de Datos",
+   "seniority": "Intermedio",
+   "benefits":{
+    "vacation": "3 weeks",
+    "health_ensurance": "OSDE 210",
+    "internet_paid": true
+},
+   "salary": 65000,
+   "long_term": true,
+   "languages": ["Python", "R"],
+   "id": "11"
+ },
+ {
+   "name": "Carlos Rodriguez",
+   "image": "https://ejemplo.com/carlos-rodriguez.jpg",
+   "description": "Ingeniero de seguridad cibernética con enfoque en protección de datos.",
+   "location": "Miami, FL",
+   "category": "Seguridad Cibernética",
+   "seniority": "Senior",
+   "benefits": {
+    "vacation": "7 weeks",
+    "health_ensurance": "OSDE 210",
+    "internet_paid": true
+},
+   "salary": 90000,
+   "long_term": true,
+   "languages": ["CISSP", "Ethical Hacking"],
+   "id": "12"
+ },
+ {
+   "name": "Marta Perez",
+   "image": "https://ejemplo.com/marta-perez.jpg",
+   "description": "Ingeniero de DevOps con experiencia en automatización y entrega continua.",
+   "location": "Barcelona, España",
+   "category": "DevOps",
+   "seniority": "Intermedio",
+   "benefits": {
+    "vacation": "3 weeks",
+    "health_ensurance": "OSDE 210",
+    "internet_paid": true
+},
+   "salary": 70000,
+   "long_term": true,
+   "languages": ["Docker", "Jenkins"],
+   "id": "13"
+ },
+ {
+   "name": "Lucas Gomez",
+   "image": "https://ejemplo.com/lucas-gomez.jpg",
+   "description": "Diseñador de UI/UX enfocado en la creación de experiencias de usuario atractivas.",
+   "location": "Buenos Aires, Argentina",
+   "category": "Diseño de UI/UX",
+   "seniority": "Intermedio",
+   "benefits": {
+    "vacation": "3 weeks",
+    "health_ensurance": "OSDE 210",
+    "internet_paid": true
+},
+   "salary": 72000,
+   "long_term": true,
+   "languages": ["Figma", "Sketch"],
+   "id": "14"
+ },
+ {
+   "name": "Isabel Lopez",
+   "image": "https://ejemplo.com/isabel-lopez.jpg",
+   "description": "Administrador de bases de datos con experiencia en SQL y NoSQL.",
+   "location": "Madrid, España",
+   "category": "Administración de Bases de Datos",
+   "seniority": "Intermedio",
+   "benefits": {
+    "vacation": "3 weeks",
+    "health_ensurance": "OSDE 210",
+    "internet_paid": true
+},
+   "salary": 68000,
+   "long_term": true,
+   "languages": ["SQL", "MongoDB"],
+   "id": "15"
+ },
+ {
+   "name": "María Sanchez",
+   "image": "https://ejemplo.com/maria-sanchez.jpg",
+   "description": "Especialista en marketing digital con experiencia en estrategias de redes sociales.",
+   "location": "Madrid, España",
+   "category": "Marketing Digital",
+   "seniority": "Senior",
+   "benefits": {
+    "vacation": "3 weeks",
+    "health_ensurance": "OSDE 210",
+    "internet_paid": true
+},
+   "salary": 70000,
+   "long_term": true,
+   "languages": ["SEO", "SEM"],
+   "id": "16"
+ },
+ {
+   "name": "Juan Perez",
+   "image": "https://ejemplo.com/juan-perez.jpg",
+   "description": "Gerente de marketing con enfoque en estrategias de marca y publicidad.",
+   "location": "Buenos Aires, Argentina",
+   "category": "Gestión de Marketing",
+   "seniority": "Senior",
+   "benefits": {
+    "vacation": "3 weeks",
+    "health_ensurance": "OSDE 210",
+    "internet_paid": true
+},
+   "salary": 75000,
+   "long_term": true,
+   "languages": ["Publicidad en Línea", "Marketing de Contenidos"],
+   "id": "17"
+ },
+ {
+   "name": "Luisa Rodriguez",
+   "image": "https://ejemplo.com/luisa-rodriguez.jpg",
+   "description": "Especialista en SEO con experiencia en optimización de motores de búsqueda.",
+   "location": "Barcelona, España",
+   "category": "SEO",
+   "seniority": "Intermedio",
+   "benefits": {
+    "vacation": "3 weeks",
+    "health_ensurance": "OSDE 210",
+    "internet_paid": true
+},
+   "salary": 60000,
+   "long_term": true,
+   "languages": ["Google Analytics", "Moz"],
+   "id": "18"
+ },
+ {
+   "name": "Carlos Martinez",
+   "image": "https://ejemplo.com/carlos-martinez.jpg",
+   "description": "Especialista en marketing de contenidos con experiencia en estrategias de blog y redes sociales.",
+   "location": "Santiago, Chile",
+   "category": "Marketing de Contenidos",
+   "seniority": "Intermedio",
+   "benefits": {
+    "vacation": "3 weeks",
+    "health_ensurance": "OSDE 210",
+    "internet_paid": true
+},
+   "salary": 62000,
+   "long_term": true,
+   "languages": ["WordPress", "Hootsuite"],
+   "id": "19"
+ },
+ {
+   "name": "Isabel Lopez",
+   "image": "https://ejemplo.com/isabel-lopez.jpg",
+   "description": "Analista de datos de marketing con habilidades en análisis de datos y visualización.",
+   "location": "Lima, Perú",
+   "category": "Análisis de Datos de Marketing",
+   "seniority": "Intermedio",
+   "benefits": {
+    "vacation": "3 weeks",
+    "health_ensurance": "OSDE 210",
+    "internet_paid": true
+},
+   "salary": 65000,
+   "long_term": true,
+   "languages": ["Google Data Studio", "Excel"],
+   "id": "20"
+ },
+ {
+   "name": "Miguel Garcia",
+   "image": "https://ejemplo.com/miguel-garcia.jpg",
+   "description": "Especialista en email marketing con experiencia en campañas automatizadas.",
+   "location": "México City, México",
+   "category": "Email Marketing",
+   "seniority": "Intermedio",
+   "benefits": {
+    "vacation": "7 weeks",
+    "health_ensurance": "OSDE 210",
+    "internet_paid": true
+},
+   "salary": 63000,
+   "long_term": true,
+   "languages": ["Mailchimp", "HubSpot"],
+   "id": "21"
+ },
+ {
+   "name": "Laura Martinez",
+   "image": "https://ejemplo.com/laura-martinez.jpg",
+   "description": "Especialista en marketing de influencers con experiencia en colaboraciones estratégicas.",
+   "location": "Sao Paulo, Brasil",
+   "category": "Marketing de Influencers",
+   "seniority": "Intermedio",
+   "benefits": {
+    "vacation": "2 weeks",
+    "health_ensurance": "IOMA",
+    "internet_paid": true
+},
+   "salary": 67000,
+   "long_term": true,
+   "languages": ["Instagram", "YouTube"],
+   "id": "22"
+ },
+ {
+   "name": "Daniel Ramirez",
+   "image": "https://ejemplo.com/daniel-ramirez.jpg",
+   "description": "Gerente de marketing de producto con experiencia en lanzamientos de productos y estrategia de mercado.",
+   "location": "Lisboa, Portugal",
+   "category": "Gestión de Productos",
+   "seniority": "Senior",
+   "benefits": {
+    "vacation": "2 weeks",
+    "health_ensurance": "IOMA",
+    "internet_paid": true
+},
+   "salary": 72000,
+   "long_term": true,
+   "languages": ["Estrategia de Producto", "Investigación de Mercado"],
+   "id": "23"
+ }
+]

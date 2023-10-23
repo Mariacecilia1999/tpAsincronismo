@@ -7,5 +7,8 @@ const showJobs = (data) =>{
          <p>${description}</p>
          <a>${languages}</a>
       </div>`
+
+      console.log(benefits)
    }
 }
+
