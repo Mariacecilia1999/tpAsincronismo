@@ -4,6 +4,8 @@ const languages = []
 
 
 const showJobs = (data) => {
+   const categories = [...new Set(data.map(item => item.category))];
+   optionSearchCategories(categories)
    for (const {id, name, image, description, location, seniority, benefits, salary, long_term, languages} of data) {
       $('.allJobs').innerHTML += `
       <div class='cardJob'>
@@ -18,7 +20,15 @@ const showJobs = (data) => {
   
    capturingDeleteBtn()
    capturingEditBtn()
+  
 }
+
+const optionSearchCategories = (categories) =>{
+   for(const category of categories){
+      $('#searchCategory').innerHTML += `<option value='${category}'>${category}</option>`
+   }
+}
+
 
 const capturingDeleteBtn = () =>{
    for(const btn of $$('.deleteJob')){
