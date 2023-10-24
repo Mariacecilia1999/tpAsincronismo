@@ -49,10 +49,10 @@ const formEditJob = (job) =>{
    $('#description').value = job.description
    $('#location').value = job.location
    $('#seniority').value = job.seniority
-   $('#category').value = job.categor
-   $('#vacations').value = job.benefits.vacations
-   $('#healthEnsurance').value = job.benefits.health_ensurance
-   $('#internetPaid').value = job.benefits.internet_paid
+   $('#category').value = job.category
+   $('#vacations').value = job.benefits.vacations,
+   $('#healthEnsurance').value = job.benefits.health_ensurance,
+   $('#internetPaid').value = job.benefits.internet_paid,
    $('#salary').value = job.salary
    $('#longTerm').value = job.long_term
    
