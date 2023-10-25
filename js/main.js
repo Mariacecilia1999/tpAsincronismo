@@ -89,6 +89,9 @@ const urlParams = () => {
  
    console.log(filteredData)
    showJobs(filteredData)
+   $('#searchSeniority').value = seniorityFilter
+   $('#searchLocation').value = locationFilter
+   $('#searchCategory').value = categoryFilter
  }
 
 
