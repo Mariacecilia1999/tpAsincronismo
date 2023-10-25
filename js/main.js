@@ -1,12 +1,11 @@
 const $ = selector => document.querySelector(selector);
 const $$ = selector => document.querySelectorAll(selector)
 const languages = []
-
+const categories = []
+const locations = []
+const senioritys = []
 
 const showJobs = (data) => {
-   const categories = []
-   const locations = []
-   const senioritys = []
    
    data.forEach(item => {
      if (!categories.includes(item.category)) {
@@ -40,40 +39,60 @@ const showJobs = (data) => {
 }
 
 const optionSearch = (categories,locations, senioritys) =>{
+   $('#searchCategory').innerHTML = `<option value=''>Category</option>`
    for(const category of categories){
       $('#searchCategory').innerHTML += `<option value='${category}'>${category}</option>`
    }
+   $('#searchLocation').innerHTML = `<option value=''>Location</option>`
    for(const location of locations){
       $('#searchLocation').innerHTML += `<option value='${location}'>${location}</option>`
    }
+   $('#searchSeniority').innerHTML = `<option value=''>Seniority</option>`
    for(const seniority of senioritys){
       $('#searchSeniority').innerHTML += `<option value='${seniority}'>${seniority}</option>`
    }
 }
 
 const urlParams = () => {
-   const seniority = $('#searchSeniority').value;
-   const location = $('#searchLocation').value;
-   const category = $('#searchCategory').value;
+   const seniority = $('#searchSeniority').value
+   const location = $('#searchLocation').value
+   const category = $('#searchCategory').value
  
-   // Crear un objeto para almacenar los parámetros no vacíos
-   const params = {};
+   const params = {}
  
    if (seniority) {
-     params.seniority = seniority;
+     params.seniority = seniority
    }
    if (location) {
-     params.location = location;
+     params.location = location
    }
    if (category) {
-     params.category = category;
+     params.category = category
    }
  
-   const queryString = new URLSearchParams(params).toString();
-   searchPararmsApi(queryString);
+   const queryString = new URLSearchParams(params).toString()
+   searchPararmsApi(queryString)
  }
  
-
+ const filtersSearchs = (data) => {
+   const seniorityFilter = $('#searchSeniority').value
+   const locationFilter = $('#searchLocation').value
+   const categoryFilter = $('#searchCategory').value
+ 
+   const filteredData = data.filter((job) => {
+     const matchSeniority = seniorityFilter === "" || job.seniority === seniorityFilter
+     const matchLocation = locationFilter === "" || job.location === locationFilter
+     const matchCategory = categoryFilter === "" || job.category === categoryFilter
+ 
+     return matchSeniority && matchLocation && matchCategory
+   })
+ 
+   console.log(filteredData)
+   showJobs(filteredData)
+   $('#searchSeniority').value = seniorityFilter
+   $('#searchLocation').value = locationFilter
+   $('#searchCategory').value = categoryFilter
+ }
 
 
 
