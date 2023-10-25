@@ -148,7 +148,7 @@ const initialized = () => {
       e.preventDefault()
       urlParams()
    })
-   showJobsApi()
+   setTimeout(showJobsApi, 2000);
    $('#addLanguage').addEventListener('click', (e) => {
       e.preventDefault()
       addLanguajes()
@@ -156,14 +156,17 @@ const initialized = () => {
    $('#jobForm').addEventListener('submit', (e) => {
       e.preventDefault()
          addJobApi(urlJobs)
-   });
+   })
    $('#editBtn').addEventListener('click', (e) =>{
       e.preventDefault()
       const idJob = $('#editBtn').getAttribute('id-edit')
       editJobApi(urlJobs,idJob)
    })
    
-   
+   $('#clearResults').addEventListener('click', (e) =>{
+      e.preventDefault()
+      location.reload()
+   })
 }
 
 window.addEventListener('DOMContentLoaded', initialized)
