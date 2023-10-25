@@ -154,7 +154,15 @@ const initialized = () => {
    setTimeout(loading, 2000);
    $('#searchParams').addEventListener('click', (e) =>{
       e.preventDefault()
-      urlParams()
+      $('.allJobs').classList.add('hidden')
+      $('#editForm').classList.add('hidden')
+      $('#chargind').style.display='block'
+      setTimeout(() => {
+         loading()
+         urlParams()
+
+       }, 2000);
+       //urlParams()
    })
    $('#addLanguage').addEventListener('click', (e) => {
       e.preventDefault()
