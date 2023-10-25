@@ -141,14 +141,21 @@ const addLanguajes = () => {
    return languages
 }
 
-
+const loading = () =>{
+   //setTimeout(showJobsApi, 2000);
+   $('.allJobs').classList.remove('hidden')
+   $('#editForm').classList.remove('hidden')
+   $('#chargind').style.display='none'
+   showJobsApi()
+}
 
 const initialized = () => {
+   
+   setTimeout(loading, 2000);
    $('#searchParams').addEventListener('click', (e) =>{
       e.preventDefault()
       urlParams()
    })
-   setTimeout(showJobsApi, 2000);
    $('#addLanguage').addEventListener('click', (e) => {
       e.preventDefault()
       addLanguajes()

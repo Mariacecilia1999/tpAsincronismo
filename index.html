@@ -20,10 +20,10 @@
       <button type="button" id="clearResults">Clear</button>
    </header>
    <main>
-      <div class="allJobs">
+      <div class="allJobs hidden">
 
       </div>
-      <div>
+      <div class="hidden" id="editForm">
          <form id="jobForm">
             <label for="">Job Title</label>
             <input type="text" id="jobTitle">
@@ -53,6 +53,12 @@
                <button type="submit" id="editBtn">Edit</button>
             </div>
          </form>
+      </div>
+      <div id="chargind">
+         <div class="loading">
+            <p>Loading Jobs</p>
+            <img class="catLoading" src="./img/gato.png" alt="">
+         </div>
       </div>
    </main>
    <script src="./js/api.js"></script>
