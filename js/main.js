@@ -4,8 +4,24 @@ const languages = []
 
 
 const showJobs = (data) => {
-   const categories = [...new Set(data.map(item => item.category))];
-   optionSearchCategories(categories)
+   const categories = []
+   const locations = []
+   const senioritys = []
+   
+   data.forEach(item => {
+     if (!categories.includes(item.category)) {
+       categories.push(item.category)
+     }
+     if (!locations.includes(item.location)) {
+       locations.push(item.location)
+     }
+     if (!senioritys.includes(item.seniority)) {
+       senioritys.push(item.seniority)
+     }
+   });
+   
+   optionSearch(categories, locations, senioritys)
+   $('.allJobs').innerHTML = ''
    for (const {id, name, image, description, location, seniority, benefits, salary, long_term, languages} of data) {
       $('.allJobs').innerHTML += `
       <div class='cardJob'>
@@ -23,11 +39,42 @@ const showJobs = (data) => {
   
 }
 
-const optionSearchCategories = (categories) =>{
+const optionSearch = (categories,locations, senioritys) =>{
    for(const category of categories){
       $('#searchCategory').innerHTML += `<option value='${category}'>${category}</option>`
    }
+   for(const location of locations){
+      $('#searchLocation').innerHTML += `<option value='${location}'>${location}</option>`
+   }
+   for(const seniority of senioritys){
+      $('#searchSeniority').innerHTML += `<option value='${seniority}'>${seniority}</option>`
+   }
 }
+
+const urlParams = () => {
+   const seniority = $('#searchSeniority').value;
+   const location = $('#searchLocation').value;
+   const category = $('#searchCategory').value;
+ 
+   // Crear un objeto para almacenar los parámetros no vacíos
+   const params = {};
+ 
+   if (seniority) {
+     params.seniority = seniority;
+   }
+   if (location) {
+     params.location = location;
+   }
+   if (category) {
+     params.category = category;
+   }
+ 
+   const queryString = new URLSearchParams(params).toString();
+   searchPararmsApi(queryString);
+ }
+ 
+
+
 
 
 const capturingDeleteBtn = () =>{
@@ -95,7 +142,12 @@ const addLanguajes = () => {
 }
 
 
+
 const initialized = () => {
+   $('#searchParams').addEventListener('click', (e) =>{
+      e.preventDefault()
+      urlParams()
+   })
    showJobsApi()
    $('#addLanguage').addEventListener('click', (e) => {
       e.preventDefault()
