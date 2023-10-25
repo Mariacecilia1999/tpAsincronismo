@@ -40,7 +40,6 @@ const deleteJob = (id) =>{
    })
 }
 
-
 const searchPararmsApi = (params) => {
    const apiUrlWithParams = `${urlJobs}${params ? `?${params}` : ""}`;
    console.log(apiUrlWithParams)
@@ -49,7 +48,6 @@ const searchPararmsApi = (params) => {
      .then((data) => filtersSearchs(data))
      .catch((error) => console.error('Error al obtener datos de la API:', error));
  }
-
 
 
  
