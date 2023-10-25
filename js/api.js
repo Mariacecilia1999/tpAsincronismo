@@ -46,7 +46,10 @@ const searchPararmsApi = (params) => {
    console.log(apiUrlWithParams)
    fetch(apiUrlWithParams)
      .then((response) => response.json())
-     .then((data) => showJobs(data))
+     .then((data) => filtersSearchs(data))
      .catch((error) => console.error('Error al obtener datos de la API:', error));
- };
+ }
 
+
+
+ 

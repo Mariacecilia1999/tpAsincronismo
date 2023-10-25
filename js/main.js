@@ -74,7 +74,22 @@ const urlParams = () => {
    searchPararmsApi(queryString)
  }
  
-
+ const filtersSearchs = (data) => {
+   const seniorityFilter = $('#searchSeniority').value
+   const locationFilter = $('#searchLocation').value
+   const categoryFilter = $('#searchCategory').value
+ 
+   const filteredData = data.filter((job) => {
+     const matchSeniority = seniorityFilter === "" || job.seniority === seniorityFilter
+     const matchLocation = locationFilter === "" || job.location === locationFilter
+     const matchCategory = categoryFilter === "" || job.category === categoryFilter
+ 
+     return matchSeniority && matchLocation && matchCategory
+   })
+ 
+   console.log(filteredData)
+   showJobs(filteredData)
+ }
 
 
 
