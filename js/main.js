@@ -32,7 +32,13 @@ const showJobs = (data) => {
       <div class='editJob' id-edit="${id}">Editar</div>`
 
    }
-  
+  if(data.length === 0){
+      $('.textResult').innerText = 'No results'
+      $('#chargind').style.backgroundColor ='red'
+  }else{
+   $('.textResult').innerText = 'Loading results'
+   $('#chargind').style.backgroundColor ='rgb(148, 216, 148)'
+  }
    capturingDeleteBtn()
    capturingEditBtn()
   
@@ -165,23 +171,21 @@ const loading = () =>{
    $('.allJobs').classList.remove('hidden')
    $('#editForm').classList.remove('hidden')
    $('#chargind').style.display='none'
-   showJobsApi()
+  
 }
 
 const initialized = () => {
-   
+   //urlParams()
    setTimeout(loading, 2000);
+   showJobsApi()
    $('#searchParams').addEventListener('click', (e) =>{
       e.preventDefault()
+      //loading()
       $('.allJobs').classList.add('hidden')
       $('#editForm').classList.add('hidden')
       $('#chargind').style.display='block'
-      setTimeout(() => {
-         loading()
-         urlParams()
-
-       }, 2000);
-       //urlParams()
+       setTimeout(loading, 2000);
+       urlParams()
    })
    $('#addLanguage').addEventListener('click', (e) => {
       e.preventDefault()
@@ -199,6 +203,9 @@ const initialized = () => {
    
    $('#clearResults').addEventListener('click', (e) =>{
       e.preventDefault()
+      $('#searchSeniority').value = ''
+      $('#searchLocation').value = ''
+      $('#searchCategory').value = ''
       location.reload()
    })
 }
