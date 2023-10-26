@@ -24,17 +24,33 @@ const showJobs = (data) => {
    for (const {id, name, image, description, location, seniority, benefits, salary, long_term, languages} of data) {
       $('.allJobs').innerHTML += `
       <div class='cardJob'>
+         <div class='editDelete'>
+            <img class='editJob imgEdit' id-edit="${id}"  src='../img/lapiz.png'/>
+            <img class='deleteJob'  id-delete="${id}" src='../img/eliminar.png'/>
+         </div>
          <h2>${name}</h2>
          <p>${description}</p>
-         <a>${languages.join(', ')}</a>
+         <a>${languages.map(language => `<span class='languageStyle'>${language}</span>`).join(' ')}</a>
+         <div id='containerMore'>
+            <a class='more' id-more='${id}'>Ver más<a/>
+         </div>
       </div> 
-      <div class='deleteJob' id-delete="${id}">Delete</div>
-      <div class='editJob' id-edit="${id}">Editar</div>`
+      `
+
+      $$('.more').forEach(btnMore =>{
+         btnMore.addEventListener('click', () =>{
+            const idMore = btnMore.getAttribute('id-more')
+            console.log(idMore)
+            $('#seeMoreContainer').classList.remove('hidden')
+            showJobsApiId(idMore)
+         })
+      })
 
    }
   if(data.length === 0){
       $('.textResult').innerText = 'No results'
       $('#chargind').style.backgroundColor ='red'
+      showJobsApi()
   }else{
    $('.textResult').innerText = 'Loading results'
    $('#chargind').style.backgroundColor ='rgb(148, 216, 148)'
@@ -45,11 +61,11 @@ const showJobs = (data) => {
 }
 
 const optionSearch = (categories,locations, senioritys) =>{
-   $('#searchCategory').innerHTML = `<option value=''>Category</option>`
+   $('#searchCategory').innerHTML = `<option value=''>Categoría</option>`
    for(const category of categories){
       $('#searchCategory').innerHTML += `<option value='${category}'>${category}</option>`
    }
-   $('#searchLocation').innerHTML = `<option value=''>Location</option>`
+   $('#searchLocation').innerHTML = `<option value=''>Lugar</option>`
    for(const location of locations){
       $('#searchLocation').innerHTML += `<option value='${location}'>${location}</option>`
    }
@@ -120,10 +136,19 @@ const capturingEditBtn = () =>{
          $('#editBtn').setAttribute('id-edit', get)
          showJobsApi(get)
          isSubmit = false
+         $('.allJobs').style.display='none'
+         $('#editForm').style.display=''
+         $('#editForm').classList.remove('hidden')
+         $('#editForm').style.display='flex'
+         $('#jobForm').style.display='flex'
+         $('#editBtn').classList.remove('hidden')
+         $('#submit').classList.add('hidden')
+         $('.filters').classList.add('hidden')
          })
+         
+        
      
    }
-   
 }
 
 const formEditJob = (job) =>{
@@ -174,8 +199,83 @@ const loading = () =>{
   
 }
 
+const showFormNewJob = () =>{
+   $('.allJobs').classList.add('hidden')
+   $('.allJobs').classList.add('hidden')
+   $('#editForm').classList.remove('hidden')
+   $('#editForm').classList.remove('hidden')
+   $('#editForm').style.display='flex'
+   $('#jobForm').style.display='flex'
+   $('#containerForm').classList.remove('hidden')
+   $('#jobForm').classList.remove('hidden')
+}
+
+const showAllJobsLink = () =>{
+   $('.allJobs').classList.remove('hidden')
+   $('.allJobs').classList.remove('hidden')
+   $('#editForm').classList.add('hidden')
+   $('#jobForm').classList.add('hidden')
+   $('#editForm').style.display='none'
+   $('.allJobs').style.display=''
+}
+const clearValue = () =>{
+   $('#jobTitle').value = ''
+   $('#description').value = ''
+   $('#location').value = ''
+   $('#seniority').value = ''
+   $('#category').value = ''
+   $('#vacations').value = ''
+   $('#healthEnsurance').value = ''
+   $('#internetPaid').value = ''
+   $('#salary').value = ''
+   $('#longTerm').value = ''
+   
+}
+
+const seeMore = ({name, description, languages, salary,benefits,category})=>{
+   $('.allJobs').classList.add('hidden')
+   $('#editForm').classList.add('hidden')
+   $('#jobForm').classList.add('hidden')
+   $('#editForm').style.display='none'
+   $('#seeMoreContainer').innerHTML= `<div class='cardJobMore'>
+   <h2>Nombre: ${name}</h2>
+   <p>Categoría: ${category}</p>
+   <p>${description}</p>
+   <p>Sueldo: ${salary}</p>
+   <div>
+      <a>Vacaciones: ${benefits.vacation}</a>
+      <a>Seguro medico: ${benefits.health_ensurance}</a>
+      <a>Internet pago: ${benefits.internet_paid}</a>
+   </div>
+   <a>${languages.map(language => `<span class='languageStyle'>${language}</span>`).join(' ')}</a>
+</div> `
+
+}
+
 const initialized = () => {
-   //urlParams()
+   $('#cancell').addEventListener('click', (e) =>{
+      showAllJobsLink()
+      clearValue()
+   })
+   $('#linkNewJob').addEventListener('click', (e) =>{
+      e.preventDefault()
+      showFormNewJob()
+      clearValue()
+      $('#editBtn').classList.add('hidden')
+      $('#submit').classList.remove('hidden')
+      $('.filters').classList.add('hidden')
+      $('#seeMoreContainer').classList.add('hidden')
+   })
+   $('#linkAllJobs').addEventListener('click', (e) =>{
+      e.preventDefault()
+      showAllJobsLink()
+      $('.filters').classList.remove('hidden')
+      $('#seeMoreContainer').classList.add('hidden')
+      showJobsApi()
+   })
+
+
+
    setTimeout(loading, 2000);
    showJobsApi()
    $('#searchParams').addEventListener('click', (e) =>{
@@ -193,12 +293,15 @@ const initialized = () => {
    })
    $('#jobForm').addEventListener('submit', (e) => {
       e.preventDefault()
-         addJobApi(urlJobs)
+      addJobApi(urlJobs)
+      showJobsApi()
+      showAllJobsLink()
    })
    $('#editBtn').addEventListener('click', (e) =>{
       e.preventDefault()
       const idJob = $('#editBtn').getAttribute('id-edit')
       editJobApi(urlJobs,idJob)
+      showAllJobsLink()
    })
    
    $('#clearResults').addEventListener('click', (e) =>{
@@ -208,6 +311,8 @@ const initialized = () => {
       $('#searchCategory').value = ''
       location.reload()
    })
+
+   
 }
 
 window.addEventListener('DOMContentLoaded', initialized)

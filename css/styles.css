@@ -10,12 +10,14 @@ main{
 }
 
 .cardJob{
-   width: 200px;
-   height: 200px;
+   width: 270px;
+   height: 250px;
    border: black 2px solid;
    border-radius: 5%;
    margin: 20px;
    text-align: center;
+   padding: 10px;
+   padding-bottom: 10px;
 }
 
 .hidden{
@@ -39,7 +41,7 @@ main{
    width: 200px;
    height: 200px;
    position: absolute;
-   right: -300px; 
+   right: -300px;
    animation: moveCat 2s infinite linear;
 }
 
@@ -49,9 +51,309 @@ main{
      right: 50px;
    }
    50% {
-     right: 80%; 
+     right: 80%;
    }
    100% {
-     right: 50px; 
+     right: 50px;
    }
+ }
+
+ header{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+ }
+ .titleLinks{
+   display: flex;
+   flex-direction: column;
+ }
+
+ .editDelete{
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .editDelete img{
+   width: 20px;
+ }
+
+ .imgEdit{
+   border-radius: 100%;
+ }
+
+.editDelete img:hover{
+   transform: scale(1.3);
+   cursor: pointer;
+
+}
+
+.languageStyle{
+   background-color: rgb(240, 240, 77);
+   padding: 3px 7px;
+   border-radius: 2px;
+   font-size: 14px;
+}
+
+#editForm{
+   margin-top: 50px;
+   background: rgb(148, 216, 148);
+   /* width: 54%; */
+   display: flex;
+   justify-content: center;
+   padding: 30px 40px;
+}
+
+#editForm form{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+#editForm form input{
+   border-radius: 4px;
+   border: none;
+   margin-top: 5px;
+   margin-bottom: 4px;
+   /* width: 300px; */
+}
+
+#containerForm{
+   display: flex;
+   justify-content: center;
+   justify-content: center;
+   flex-direction: row-reverse;
+   gap: 50px;
+}
+
+#addLanguage{
+   width: 70px;
+}
+
+header a, .filters button, .filters select, #cancell, #submit, #editBtn{
+   color: black;
+   text-decoration: none;
+   font-size: 23px;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   margin-left: 20px;
+   background-color: rgb(255, 246, 234);
+   border-radius: 5px;
+   padding: 7px 10px;
+}
+
+.filters select{
+   border: none;
+   font-size: 15px;
+}
+
+.filters button{
+   border: none;
+   font-size: 15px;
+}
+
+#searchparams{
+   background-color: rgb(148, 216, 148);
+   cursor: pointer;
+}
+
+.containerAddLanguage .pincelLanguage{
+   background-color: rgb(136, 107, 69);
+   border-radius: 100%;
+   font-size: 17px;
+   padding: 10px;
+   width: 20px;
+   text-align: center;
+   cursor: pointer;
+}
+
+#catForm{
+   width: 130px;
+}
+
+.containerFormText, .titleTextarea{
+   /*background-color:  rgb(219, 138, 138);*/
+   border-radius: 2%;
+   display: flex;
+   flex-direction: column;
+   padding-top: 20px;
+   padding-bottom: 20px;
+}
+
+
+.titleTextarea{
+   width: 30%;
+   padding: 30px;
+}
+
+.containerFormText{
+   /* width: 100%; */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+
+.containerFormText div{
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   /* width: 80%; */
+}
+
+form label{
+   font-size: 20px;
+}
+
+form input{
+   padding: 5px;
+}
+
+
+.titleLinks h1{
+   font-size: 2.5rem;
+}
+.titleLinks div{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 40vw;
+}
+.titleLinks img{
+   width: 80px;
+}
+
+#editForm{
+   display: none;
+}
+
+.containerButtonsHeaders{
+   margin-top: 40px;
+   display: flex;
+   justify-content: center;
+}
+
+#clearResults, #cancell{
+   background-color: rgb(219, 138, 138);
+   cursor: pointer;
+   color: white;
+}
+
+.containerLanguage{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row;
+   width: 100%;
+}
+
+#cancell, #submit, #editBtn{
+   width: 100px;
+   font-size: 14px;
+   border: none;
+   cursor: pointer;
+}
+
+.btns{
+   margin-top: 30px;
+   display: flex;
+   justify-content: center;
+}
+
+#charging, .loading{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.loading{
+   height: 70vh;
+}
+
+#containerLanguage{
+   display: flex;
+}
+
+#containerLanguage{
+ width: 400px;
+ height: 30px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: row;
+ background-color: white;
+ border-radius: 4px;
+}
+
+#containerLanguage img{
+   width: 40px;
+   cursor: pointer;
+}
+
+
+#languages{
+   width: 100%;
+   height: 100%;
+}
+
+#containerCatForm{
+   display: flex;
+   justify-content: center;
+   padding-top: 50px;
+}
+
+
+ 
+ #containerMore{
+   margin-top: 35px;
+ }
+
+ .more{
+   background-color: rgb(148, 148, 233);
+   padding:4px 15px;
+   border-radius: 20px;
+   font-size: large;
+   text-align: center;
+   cursor: pointer;
+ }
+
+ .cardJobMore{
+   margin-top: 50px;
+   width: 500px;
+   border: black 2px solid;
+   border-radius: 1%;
+   padding: 10px;
+ }
+ .cardJobMore div{
+   padding-bottom: 20px;
+   display: flex;
+   flex-direction: column;
+ }
+
+ #editForm{
+   display: none;
+ }
+
+ @media (max-width: 1200px) {
+   #editForm, #containerForm, .titleTextarea{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 97%;
+   }
+   header a{
+      font-size: 14px;
+      width: 100px;
+      height: 30px;
+      text-align: center;
+   }
+   header .filters select{
+      width: 200px;
+   }
+   .containerButtonsHeaders{
+      display: flex;
+      justify-items: flex-start;
+   }
+   #editForm{
+      display: none;
+    }
  }

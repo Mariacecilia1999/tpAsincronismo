@@ -13,6 +13,18 @@ const showJobsApi = (id = '') =>{
    
 }
 
+const showJobsApiId = (id) =>{
+   fetch(`${urlJobs}/${id}`)
+   .then(response => response.json())
+   .then(data => {
+      console.log(data)
+      seeMore(data)
+   })
+   
+}
+
+
+
 const addJobApi = (url) =>{
 fetch(url,{
    method: 'POST', 
