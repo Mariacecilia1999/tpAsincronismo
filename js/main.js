@@ -162,6 +162,7 @@ const formEditJob = (job) =>{
    $('#internetPaid').value = job.benefits.internet_paid,
    $('#salary').value = job.salary
    $('#longTerm').value = job.long_term
+   $('#languages').value = job.languages
    
 }
    

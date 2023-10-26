@@ -405,4 +405,7 @@ form input{
    padding: 30px;
  }
 
- 
+ .pincelLanguage:hover{
+   transition: 1s;
+   transform: scale(2.1);
+ }
