@@ -12,9 +12,9 @@
             <img src="./img/gato.png" alt="">
             <h1>Search jobs</h1>
          </div>
-         <div>
+         <div class="navLinks">
             <a href="#" id="linkAllJobs">Todos</a>
-            <a href="#" id="linkNewJob">Agregar nuevo trabajo</a>
+            <a href="#" id="linkNewJob">Nuevo</a>
          </div>
       </div>
       <div class="filters">
@@ -45,9 +45,9 @@
          <form id="jobForm" class="hidden">
           <div id="containerForm" class="hidden">
             <div class="titleTextarea">
-               <label for="">Job Title</label>
+               <label for="">Nombre</label>
                <input type="text" id="jobTitle">
-               <label for="">Description</label>
+               <label for="">Descripción</label>
                <textarea name="" id="description" cols="30" rows="10"></textarea>
                <div id="containerCatForm">
                   <img id="catForm" src="./img/gato.png" alt="">
@@ -55,21 +55,21 @@
             </div>
             <div class="containerFormText">
                <div>
-               <label for="">Location</label>
+               <label for="">Lugar</label>
                <input type="text" id="location">
                <label for="">Seniority</label>
                <input type="text" id="seniority">
-               <label for="">Category</label>
+               <label for="">Categoría</label>
                <input type="text" id="category">
-               <label for="">Benefits</label>
+               <label for="">Beneficiós</label>
                <input type="text" placeholder="vacations" id="vacations">
                <input type="text" placeholder="health insurance" id="healthEnsurance">
                <input type="text" placeholder="internet paid" id="internetPaid">
-               <label for="">Salary</label>
+               <label for="">Sueldo</label>
                <input type="number" id="salary">
                <label for="">Long term</label>
                <input type="text" id="longTerm">
-                  <label for="">Languages</label>
+                  <label for="">Lenguajes</label>
                   <div id="containerLanguage">
                   <input type="text" id="languages">
                         <!-- <a href="#" id="addLanguage">Add</a> -->
@@ -90,7 +90,7 @@
       </div>
       <div id="chargind">
          <div class="loading result">
-            <p class="textResult">Loading results</p>
+            <p class="textResult">Cargando resultados disponibles</p>
             <img class="catLoading" src="./img/gato.png" alt="">
          </div>
       </div>

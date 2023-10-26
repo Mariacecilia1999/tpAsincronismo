@@ -33,6 +33,11 @@ fetch(url,{
    },
    body: JSON.stringify(addJobForm())
 })
+.then(response => {
+   if (response.ok) {
+      location.reload();
+   } 
+})
 }
 
 const editJobApi = (url, id) =>{
@@ -42,15 +47,28 @@ const editJobApi = (url, id) =>{
          'Content-Type' : 'Application/json'
       },
       body: JSON.stringify(addJobForm())
+   }).then(response => {
+      if (response.ok) {
+         location.reload();
+      } 
    })
    }
    
 
-const deleteJob = (id) =>{
-   fetch(`${urlJobs}/${id}`,{
-      method: 'DELETE', 
-   })
-}
+   const deleteJob = (id) => {
+      fetch(`${urlJobs}/${id}`, {
+         method: 'DELETE'
+      })
+      .then(response => {
+         if (response.ok) {
+            location.reload();
+         } 
+      })
+      .catch(error => {
+         console.error('Error en la solicitud:', error)
+      })
+   }
+   
 
 const searchPararmsApi = (params) => {
    const apiUrlWithParams = `${urlJobs}${params ? `?${params}` : ""}`;

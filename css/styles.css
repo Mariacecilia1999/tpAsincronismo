@@ -1,3 +1,12 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+
+header{
+   margin-bottom: 30px;
+}
+
 main{
    display: flex;
    justify-content: center;
@@ -263,6 +272,8 @@ form input{
    justify-content: center;
    align-items: center;
    flex-direction: column;
+   margin-top: 50px;
+   padding-top: 40px;
 }
 
 .loading{
@@ -329,6 +340,10 @@ form input{
    flex-direction: column;
  }
 
+ .cardJobMore p{
+   padding: 5px;
+ }
+
  #editForm{
    display: none;
  }
@@ -356,4 +371,38 @@ form input{
    #editForm{
       display: none;
     }
+
+    .navLinks{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+    }
+    .navLinks a{
+      padding: 5px;
+      margin-bottom: 7px;
+      font-size: small;
+      background-color: white;
+    }
+
+    .navLinks a:hover{
+      background-color: aliceblue;
+    }
+
+    header .filters{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 100%;
+      padding-right: 10px;
+    }
  }
+
+ .cardJob p{
+   width: 90%;
+   height: 50px;
+   text-align: center;
+   padding: 30px;
+ }
+
+ 

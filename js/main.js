@@ -48,11 +48,11 @@ const showJobs = (data) => {
 
    }
   if(data.length === 0){
-      $('.textResult').innerText = 'No results'
+      $('.textResult').innerText = 'No hay resultados'
       $('#chargind').style.backgroundColor ='red'
       showJobsApi()
   }else{
-   $('.textResult').innerText = 'Loading results'
+   $('.textResult').innerText = 'Cargando resultados'
    $('#chargind').style.backgroundColor ='rgb(148, 216, 148)'
   }
    capturingDeleteBtn()
@@ -232,7 +232,7 @@ const clearValue = () =>{
    
 }
 
-const seeMore = ({name, description, languages, salary,benefits,category})=>{
+const seeMore = ({name, description, languages, salary,benefits,category, seniority, location})=>{
    $('.allJobs').classList.add('hidden')
    $('#editForm').classList.add('hidden')
    $('#jobForm').classList.add('hidden')
@@ -240,10 +240,12 @@ const seeMore = ({name, description, languages, salary,benefits,category})=>{
    $('#seeMoreContainer').innerHTML= `<div class='cardJobMore'>
    <h2>Nombre: ${name}</h2>
    <p>Categoría: ${category}</p>
+   <p>Seniority: ${seniority}</p>
+   <p>Lugar: ${location}</p>
    <p>${description}</p>
    <p>Sueldo: ${salary}</p>
    <div>
-      <a>Vacaciones: ${benefits.vacation}</a>
+      <a>Vacaciones: ${benefits.vacations}</a>
       <a>Seguro medico: ${benefits.health_ensurance}</a>
       <a>Internet pago: ${benefits.internet_paid}</a>
    </div>
